@@ -3,148 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>root at 北国 ｜ 中野・レンガ坂の隠れ家ビストロ</title>
+<title>cafe nom. ｜ 東中野の小さな隠れ家カフェ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#1C1714; --bg2:#241D18; --wood:#2E2620; --panel:#221B16;
-    --cream:#EFE5D6; --cream-soft:#BCAE9B; --cream-dim:#8A7E6F;
-    --amber:#D69E57; --amber-deep:#B87C34; --wine:#9A5455; --gold:#C9A86A;
-    --line:rgba(239,229,214,.13);
+    --paper:#FCF7F4; --blush:#F3DAD6; --blush-deep:#E7BDB6;
+    --rose:#BC7F78; --rose-deep:#9F665F;
+    --sage:#AEBCA6; --sage-soft:#DBE2D3;
+    --ink:#4B403B; --ink-soft:#796b64; --gold:#CBB48E;
     --serif:"Shippori Mincho",serif;
     --latin:"Cormorant Garamond",serif;
     --sans:"Zen Kaku Gothic New",-apple-system,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);font-weight:300;color:var(--cream);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--paper);line-height:1.85;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
 
-  .sample-bar{background:#120E0C;color:var(--cream-soft);text-align:center;font-size:11.5px;letter-spacing:.18em;padding:7px 16px}
-  .sample-bar span{color:var(--amber)}
+  /* sample bar */
+  .sample-bar{background:var(--ink);color:#F3E7E2;text-align:center;font-size:11.5px;letter-spacing:.18em;padding:7px 16px;font-weight:400}
+  .sample-bar span{color:var(--blush-deep)}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(28,23,20,.8);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(252,247,244,.82);backdrop-filter:blur(8px);border-bottom:1px solid rgba(75,64,59,.08)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{font-family:var(--latin);font-size:23px;letter-spacing:.05em;color:var(--cream)}
-  .brand .at{font-size:14px;font-style:italic;color:var(--amber);margin:0 5px}
-  .brand .jp{font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.04em}
-  .menu-links{display:flex;gap:30px;font-size:12px;letter-spacing:.18em;color:var(--cream-soft)}
-  .menu-links a{padding:4px 0;transition:color .25s}
-  .menu-links a:hover{color:var(--amber)}
-  .menu-links a:focus-visible{outline:2px solid var(--amber);outline-offset:4px;border-radius:2px}
+  .brand{font-family:var(--latin);font-size:24px;letter-spacing:.06em;color:var(--ink)}
+  .brand b{font-weight:500}
+  .menu-links{display:flex;gap:30px;font-size:12.5px;letter-spacing:.16em;color:var(--ink-soft)}
+  .menu-links a{position:relative;padding:4px 0;transition:color .25s}
+  .menu-links a:hover{color:var(--rose)}
+  .menu-links a:focus-visible{outline:2px solid var(--rose);outline-offset:4px;border-radius:2px}
 
   /* hero */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
-    background:radial-gradient(115% 80% at 50% 116%,rgba(214,158,87,.30),rgba(154,84,85,.07) 38%,transparent 60%),linear-gradient(180deg,#181310,#1C1714)}
-  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(100% 60% at 50% -10%,rgba(0,0,0,.45),transparent 60%);pointer-events:none}
-  .steam{position:absolute;opacity:.32;color:var(--amber)}
-  .steam.l{top:14%;left:9%;width:46px}
-  .steam.r{bottom:16%;right:10%;width:54px;opacity:.24}
-  .hero-inner{position:relative;z-index:2;padding:46px 0}
-  .eyebrow{font-family:var(--latin);font-style:italic;font-size:18px;letter-spacing:.06em;color:var(--amber);margin-bottom:22px}
-  .hero h1{font-family:var(--latin);font-weight:500;font-size:clamp(52px,11vw,104px);line-height:.96;letter-spacing:.02em;color:var(--cream)}
-  .hero h1 .at{font-style:italic;font-size:.42em;color:var(--amber);vertical-align:middle;margin:0 .18em}
-  .hero h1 .jp{font-family:var(--serif);font-weight:600;letter-spacing:.04em}
-  .tagline{font-family:var(--serif);font-weight:400;font-size:clamp(18px,3.2vw,25px);letter-spacing:.16em;margin-top:30px;color:var(--cream)}
-  .hero .sub{font-size:12.5px;letter-spacing:.24em;color:var(--cream-soft);margin-top:18px}
-  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;color:var(--cream-dim);writing-mode:vertical-rl;opacity:.8}
+  .hero{position:relative;min-height:86vh;display:flex;align-items:center;justify-content:center;text-align:center;
+    background:radial-gradient(120% 90% at 50% 0%,#FBE9E6 0%,var(--paper) 60%),linear-gradient(180deg,#F7E4E0,var(--paper));overflow:hidden}
+  .hero .sprig{position:absolute;opacity:.5;color:var(--sage)}
+  .hero .sprig.l{top:11%;left:7%;width:84px;transform:rotate(-8deg)}
+  .hero .sprig.r{bottom:13%;right:8%;width:96px;transform:rotate(166deg);color:var(--blush-deep)}
+  .hero-inner{position:relative;z-index:2;padding:40px 0}
+  .eyebrow{font-family:var(--latin);font-style:italic;font-size:18px;letter-spacing:.05em;color:var(--rose);margin-bottom:18px}
+  .hero h1{font-family:var(--latin);font-weight:400;font-size:clamp(58px,12vw,116px);line-height:.95;letter-spacing:.02em;color:var(--ink)}
+  .hero h1 .dot{color:var(--rose)}
+  .tagline{font-family:var(--serif);font-weight:400;font-size:clamp(19px,3.4vw,27px);letter-spacing:.14em;margin-top:26px;color:var(--ink)}
+  .hero .sub{font-size:13px;letter-spacing:.22em;color:var(--ink-soft);margin-top:20px}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;color:var(--ink-soft);writing-mode:vertical-rl;opacity:.7}
 
-  section{padding:98px 0}
-  .eb{font-family:var(--latin);font-style:italic;font-size:17px;letter-spacing:.05em;color:var(--amber);margin-bottom:12px}
-  h2{font-family:var(--serif);font-weight:500;font-size:clamp(24px,4.4vw,33px);letter-spacing:.1em;line-height:1.55;color:var(--cream)}
+  /* section scaffold */
+  section{padding:96px 0}
+  .eb{font-family:var(--latin);font-style:italic;font-size:17px;letter-spacing:.04em;color:var(--rose);margin-bottom:10px}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,4.6vw,34px);letter-spacing:.08em;line-height:1.5;color:var(--ink)}
   .center{text-align:center}
-  .rule{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 16px}
-  .rule .l{width:46px;height:1px;background:linear-gradient(90deg,transparent,var(--amber-deep))}
-  .rule .r{width:46px;height:1px;background:linear-gradient(90deg,var(--amber-deep),transparent)}
-  .rule .d{width:5px;height:5px;transform:rotate(45deg);background:var(--amber);opacity:.85}
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;margin:0 auto 14px;color:var(--blush-deep)}
+  .divider .line{width:42px;height:1px;background:var(--blush-deep);opacity:.7}
 
-  .concept{background:linear-gradient(180deg,var(--bg),#191410)}
-  .concept p{font-family:var(--serif);font-weight:400;font-size:clamp(15px,2.3vw,18px);line-height:2.7;letter-spacing:.07em;max-width:620px;margin:26px auto 0;color:var(--cream)}
-  .concept .accent{color:var(--amber)}
+  /* concept */
+  .concept{background:linear-gradient(180deg,var(--paper),#FAF2EE)}
+  .concept p{font-family:var(--serif);font-weight:400;font-size:clamp(15px,2.4vw,18px);line-height:2.6;letter-spacing:.06em;max-width:600px;margin:26px auto 0;color:var(--ink)}
 
   /* menu */
-  .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 44px;margin-top:56px}
-  .item{border-top:1px solid var(--line);padding-top:20px;display:flex;gap:15px;align-items:flex-start}
-  .item .ic{flex:0 0 auto;width:30px;color:var(--amber);margin-top:3px;opacity:.92}
-  .item h3{font-family:var(--serif);font-weight:500;font-size:17.5px;letter-spacing:.06em;color:var(--cream);display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-  .item h3 .price{font-family:var(--latin);font-size:18px;color:var(--amber);letter-spacing:.04em;white-space:nowrap}
-  .item p{font-size:13px;line-height:2;color:var(--cream-soft);margin-top:6px;letter-spacing:.05em}
-  .menu-note{text-align:center;font-size:11.5px;letter-spacing:.1em;color:var(--cream-dim);margin-top:42px}
+  .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 40px;margin-top:54px}
+  .item{border-top:1px solid rgba(188,127,120,.28);padding-top:20px;display:flex;gap:14px;align-items:flex-start}
+  .item .ic{flex:0 0 auto;width:30px;color:var(--sage);margin-top:2px}
+  .item h3{font-family:var(--serif);font-weight:500;font-size:17.5px;letter-spacing:.06em;color:var(--ink);display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+  .item h3 .price{font-family:var(--latin);font-size:18px;color:var(--rose);letter-spacing:.04em;white-space:nowrap}
+  .item p{font-size:13px;line-height:1.95;color:var(--ink-soft);margin-top:6px;letter-spacing:.04em}
+  .item .tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;color:var(--rose);border:1px solid var(--blush-deep);border-radius:20px;padding:1px 9px;margin-top:9px}
+  .menu-note{text-align:center;font-size:11.5px;letter-spacing:.1em;color:var(--ink-soft);margin-top:40px;opacity:.85}
 
   /* lookbook */
-  .look{background:linear-gradient(180deg,#191410,#15110E)}
-  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
-  .tile{aspect-ratio:4/5;border-radius:5px;display:flex;align-items:center;justify-content:center;text-align:center;
-    border:1px solid var(--line);box-shadow:0 16px 36px -22px #000}
-  .tile.t1{background:linear-gradient(155deg,#33291F,#1B1512)}
-  .tile.t2{background:linear-gradient(155deg,#3A2622,#1B1310)}
-  .tile.t3{background:linear-gradient(155deg,#2E2A20,#181511)}
-  .tile.t4{background:linear-gradient(155deg,#2B2A1E,#16140F)}
-  .tile.t5{background:linear-gradient(155deg,#322519,#19130E)}
-  .tile.t6{background:linear-gradient(155deg,#2C231D,#181310)}
-  .tile-in{color:var(--amber)}
-  .tile-ic{width:46px;margin:0 auto 12px;opacity:.9}
-  .tile-cap{display:block;font-size:11.5px;letter-spacing:.16em;color:var(--cream)}
-
-  /* space */
-  .space{background:linear-gradient(180deg,#15110E,#1A140F)}
-  .rows{margin-top:50px;display:grid;gap:26px;max-width:760px;margin-left:auto;margin-right:auto}
-  .row{display:flex;gap:20px;align-items:flex-start;border-left:2px solid var(--amber-deep);padding-left:22px}
-  .row h3{font-family:var(--serif);font-weight:500;font-size:18px;letter-spacing:.08em;color:var(--cream);margin-bottom:4px}
-  .row p{font-size:13.5px;color:var(--cream-soft);letter-spacing:.05em}
-  .row .lab{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--amber);flex:0 0 64px;padding-top:3px}
+  .look{background:linear-gradient(180deg,#FAF2EE,#F4E6E1)}
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:50px}
+  .tile{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;background-position:center;background-size:cover;
+    box-shadow:0 10px 30px -18px rgba(75,64,59,.5)}
+  .tile.t1{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--blush),var(--sage-soft))}
+  .tile.t2{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--sage-soft),var(--blush))}
+  .tile.t3{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--blush-deep),var(--paper))}
+  .tile.t4{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--paper),var(--blush))}
+  .tile.t5{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--sage),var(--blush-deep))}
+  .tile.t6{background-image:linear-gradient(160deg,rgba(243,218,214,.15),rgba(174,188,166,.25)),url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format&fit=crop'),linear-gradient(160deg,var(--blush),var(--sage))}
+  .tile .cap{position:absolute;left:0;bottom:0;width:100%;padding:14px 16px;font-size:11.5px;letter-spacing:.14em;color:#fff;
+    background:linear-gradient(0deg,rgba(75,64,59,.5),rgba(75,64,59,0))}
 
   /* access */
-  .access{background:linear-gradient(180deg,#1A140F,var(--bg))}
-  .info-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:50px;margin-top:52px;align-items:start}
-  .info dl{display:grid;grid-template-columns:auto 1fr;gap:17px 24px}
-  .info dt{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--amber);letter-spacing:.03em;padding-top:2px}
-  .info dd{font-size:14px;letter-spacing:.05em;line-height:1.85;color:var(--cream)}
-  .info dd small{display:block;color:var(--cream-soft);font-size:12.5px;margin-top:3px}
-  .lamp-card{background:radial-gradient(90% 70% at 50% 30%,rgba(214,158,87,.22),transparent 60%),linear-gradient(160deg,#2A211A,#16110D);
-    border:1px solid var(--line);border-radius:6px;padding:36px 30px;min-height:248px;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:0 18px 40px -24px #000}
-  .lamp-card .mk{width:44px;margin:0 auto 16px;color:var(--amber)}
-  .lamp-card h3{font-family:var(--serif);font-size:18px;letter-spacing:.12em;margin-bottom:6px;color:var(--cream)}
-  .lamp-card p{font-size:12.5px;color:var(--cream-soft);letter-spacing:.06em}
-  .ig{display:inline-flex;align-items:center;gap:9px;margin-top:20px;font-family:var(--latin);font-size:18px;letter-spacing:.04em;color:var(--amber);
-    border:1px solid var(--amber-deep);border-radius:30px;padding:8px 20px;transition:.25s}
-  .ig:hover{background:var(--amber);color:#1C1714;border-color:var(--amber)}
+  .access{background:linear-gradient(180deg,#F4E6E1,var(--paper))}
+  .info-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;margin-top:50px;align-items:start}
+  .info dl{display:grid;grid-template-columns:auto 1fr;gap:18px 22px}
+  .info dt{font-family:var(--latin);font-style:italic;font-size:15px;color:var(--rose);letter-spacing:.03em;padding-top:2px}
+  .info dd{font-size:14.5px;letter-spacing:.05em;line-height:1.8}
+  .info dd small{display:block;color:var(--ink-soft);font-size:12.5px;margin-top:3px}
+  .map-card{background:linear-gradient(160deg,var(--blush),var(--sage-soft));border-radius:6px;padding:34px 30px;min-height:240px;
+    display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:0 14px 36px -22px rgba(75,64,59,.55)}
+  .map-card .mk{width:46px;margin:0 auto 14px;color:var(--rose)}
+  .map-card h3{font-family:var(--serif);font-size:18px;letter-spacing:.1em;margin-bottom:6px}
+  .map-card p{font-size:13px;color:var(--ink-soft);letter-spacing:.05em}
+  .ig{display:inline-flex;align-items:center;gap:9px;margin-top:18px;font-family:var(--latin);font-size:18px;letter-spacing:.04em;color:var(--rose);
+    border:1px solid var(--blush-deep);border-radius:30px;padding:8px 20px;transition:.25s}
+  .ig:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
   .ig svg{width:17px}
 
-  footer{background:#120E0C;color:var(--cream-soft);text-align:center;padding:58px 24px 32px}
-  footer .fbrand{font-family:var(--latin);font-size:28px;letter-spacing:.05em;color:var(--cream)}
-  footer .fbrand .at{font-style:italic;color:var(--amber);font-size:.6em;margin:0 .15em}
-  footer .fbrand .jp{font-family:var(--serif);font-weight:500}
-  footer .ftag{font-family:var(--serif);font-size:13px;letter-spacing:.16em;margin-top:10px;color:var(--cream-soft)}
-  footer .fnote{font-size:10.5px;letter-spacing:.12em;color:var(--cream-dim);margin-top:26px;line-height:1.95}
+  /* footer */
+  footer{background:var(--ink);color:#EFE2DC;text-align:center;padding:56px 24px 30px}
+  footer .fbrand{font-family:var(--latin);font-size:30px;letter-spacing:.06em;color:#fff}
+  footer .fbrand .dot{color:var(--blush-deep)}
+  footer .ftag{font-family:var(--serif);font-size:13px;letter-spacing:.16em;margin-top:10px;color:#D9C7C1}
+  footer .fnote{font-size:10.5px;letter-spacing:.12em;color:#9d8b84;margin-top:26px;line-height:1.9}
 
+  /* reveal */
   .rev{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
   .rev.in{opacity:1;transform:none}
 
   @media(max-width:720px){
     .menu-links{display:none}
-    section{padding:72px 0}
+    section{padding:70px 0}
     .menu-grid{grid-template-columns:1fr;gap:24px}
     .tiles{grid-template-columns:repeat(2,1fr)}
     .info-grid{grid-template-columns:1fr;gap:34px}
+    .hero .sprig{opacity:.35}
   }
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rev{transition:none;opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rev{transition:none;opacity:1;transform:none}
+  }
 </style>
 </head>
 <body>
 
-<div class="sample-bar">✦&nbsp;&nbsp;これは制作イメージのサンプルです <span>（root at 北国 様へのご提案）</span>&nbsp;&nbsp;✦</div>
+<div class="sample-bar">✦&nbsp;&nbsp;これは制作イメージのサンプルです <span>（cafe nom. 様へのご提案）</span>&nbsp;&nbsp;✦</div>
 
 <header>
   <div class="wrap nav">
-    <div class="brand">root<span class="at">at</span><span class="jp">北国</span></div>
+    <div class="brand">cafe <b>nom.</b></div>
     <nav class="menu-links">
       <a href="#concept">CONCEPT</a>
       <a href="#menu">MENU</a>
-      <a href="#space">SPACE</a>
+      <a href="#look">GALLERY</a>
       <a href="#access">ACCESS</a>
     </nav>
   </div>
@@ -152,20 +148,24 @@
 
 <!-- HERO -->
 <section class="hero">
-  <svg class="steam l" viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-    <path d="M12 88 C5 74 19 66 12 52 C5 38 19 30 12 16 C8 9 10 5 12 2"/>
-    <path d="M22 88 C29 76 16 68 22 54 C28 40 16 32 22 18 C25 11 23 7 22 4"/>
-    <path d="M32 86 C26 74 37 66 32 54"/>
+  <svg class="sprig l" viewBox="0 0 60 120" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+    <path d="M30 118 C30 90 30 60 30 32"/>
+    <path d="M30 86 C16 80 10 70 10 58 C22 60 30 70 30 82"/>
+    <path d="M30 70 C44 64 50 54 50 42 C38 44 30 54 30 66"/>
+    <circle cx="30" cy="22" r="9"/><circle cx="30" cy="22" r="3" fill="currentColor" stroke="none"/>
+    <path d="M30 22 C24 14 24 6 30 0 C36 6 36 14 30 22"/>
   </svg>
-  <svg class="steam r" viewBox="0 0 40 90" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-    <path d="M12 88 C5 74 19 66 12 52 C5 38 19 30 12 16 C8 9 10 5 12 2"/>
-    <path d="M22 88 C29 76 16 68 22 54 C28 40 16 32 22 18"/>
+  <svg class="sprig r" viewBox="0 0 60 120" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+    <path d="M30 118 C30 90 30 60 30 32"/>
+    <path d="M30 86 C16 80 10 70 10 58 C22 60 30 70 30 82"/>
+    <path d="M30 70 C44 64 50 54 50 42 C38 44 30 54 30 66"/>
+    <circle cx="30" cy="22" r="9"/><circle cx="30" cy="22" r="3" fill="currentColor" stroke="none"/>
   </svg>
   <div class="hero-inner wrap">
-    <div class="eyebrow">Nakano, Tokyo &mdash; Renga-zaka</div>
-    <h1>root<span class="at">at</span><span class="jp">北国</span></h1>
-    <div class="tagline">受け継いだ酒場の灯。古民家の隠れ家ビストロ。</div>
-    <div class="sub">名物おでん ／ 自然派ワイン ／ 中野・レンガ坂</div>
+    <div class="eyebrow">Higashi-Nakano, Tokyo</div>
+    <h1>cafe nom<span class="dot">.</span></h1>
+    <div class="tagline">日常に、少しの特別感を。</div>
+    <div class="sub">韓国風の小さな隠れ家カフェ ／ 季節をうつすチーズケーキ</div>
   </div>
   <div class="scroll-cue">SCROLL</div>
 </section>
@@ -173,10 +173,10 @@
 <!-- CONCEPT -->
 <section id="concept" class="concept center">
   <div class="wrap rev">
-    <div class="rule"><span class="l"></span><span class="d"></span><span class="r"></span></div>
+    <div class="divider"><span class="line"></span>✿<span class="line"></span></div>
     <div class="eb">Concept</div>
-    <h2>受け継いだ酒場の灯。</h2>
-    <p>五十五年続いた酒場「北国」。その名と灯を受け継ぎ、古民家をリノベーションした<span class="accent">和洋ビストロ</span>です。だしの染みた名物おでん、生産者から届く古来種の野菜、自家製のシャルキュトリー。<span class="accent">自然派ワイン</span>とともに、ゆっくりと。中野・レンガ坂の路地裏にある、大人の隠れ家。</p>
+    <h2>扉の向こうの、淡い時間。</h2>
+    <p>静かな住宅街、ビルの2階。扉をあければ、パステルに包まれた小さな空間がひろがります。とろけるバスクチーズケーキ、季節をうつすレアチーズケーキ、生花を添えた一皿。<br>写真に残したくなる、少し特別な日常のための場所です。</p>
   </div>
 </section>
 
@@ -184,88 +184,59 @@
 <section id="menu">
   <div class="wrap">
     <div class="center rev">
-      <div class="eb">Menu</div>
-      <h2>おでんと、季節のひと皿。</h2>
+      <div class="eb">Sweets &amp; Drinks</div>
+      <h2>季節の、ひと皿。</h2>
     </div>
     <div class="menu-grid">
       <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M9 22h22a11 9 0 0 1-22 0z"/><path d="M9 22a11 6 0 0 1 22 0"/><path d="M16 11c-2 2 0 4 0 4M24 10c-2 2 0 4 0 4M20 8c-2 2 0 4 0 4"/></svg>
-        <div><h3><span>名物おでん 盛り合わせ</span><span class="price">¥300〜</span></h3>
-          <p>だしの染みた、おまかせの盛り合わせ。単品でも。〆はおでん出汁の炊き込みご飯で。</p></div>
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 20c0-5 5-8 12-8s12 3 12 8v8H8z"/><path d="M8 28h24" /><path d="M20 12V7"/><circle cx="20" cy="6" r="1.6" fill="currentColor" stroke="none"/></svg>
+        <div>
+          <h3><span>バスクチーズケーキ</span><span class="price">¥800</span></h3>
+          <p>表面はこんがり、中はとろり。季節ごとに桜や栗など、その時々の表情で。</p>
+        </div>
       </div>
       <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M20 32c-7-2-11-8-11-15 6 0 11 4 11 11"/><path d="M20 28c2-7 7-11 13-11 0 6-3 11-9 13"/><path d="M20 32V18"/></svg>
-        <div><h3><span>古来種野菜（週替わり）</span></h3>
-          <p>生産者から届く、滋味ゆたかな旬の野菜。週ごとに表情を変えて。</p></div>
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 16h20l-2 16H12z"/><path d="M14 16c0-4 12-4 12 0"/><path d="M20 8v4"/></svg>
+        <div>
+          <h3><span>季節のレアチーズケーキ</span><span class="price">¥900</span></h3>
+          <p>桃と紅茶、アメリカンチェリーなど。旬のフルーツをのせた、やさしい口どけ。</p>
+        </div>
       </div>
       <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M8 27h24"/><path d="M10 27c2-6 18-6 20 0"/><circle cx="16" cy="22" r="1.3" fill="currentColor" stroke="none"/><circle cx="22" cy="23" r="1.3" fill="currentColor" stroke="none"/><path d="M24 13l6-2-1 5"/></svg>
-        <div><h3><span>自家製シャルキュトリー</span></h3>
-          <p>パテやハムを少しずつ。ワインに寄り添う、自家製の盛り合わせ。</p></div>
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="20" cy="20" r="5"/><path d="M20 15c-2-4 0-7 0-7s2 3 0 7M25 20c4-2 7 0 7 0s-3 2-7 0M20 25c2 4 0 7 0 7s-2-3 0-7M15 20c-4 2-7 0-7 0s3-2 7 0"/></svg>
+        <div>
+          <h3><span>フラワーリボンケーキ</span><span class="price">¥3,300〜</span></h3>
+          <p>生花を飾った、記念日のための一台。お祝いやプレゼントに。</p>
+          <span class="tag">要予約 / 3日前まで</span>
+        </div>
       </div>
       <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M11 14a9 7 0 0 1 18 0z"/><path d="M9 14h22"/><path d="M20 14v17"/></svg>
-        <div><h3><span>鴨・牛・豚のメイン</span></h3>
-          <p>火入れにこだわった、その日のメイン。じっくりと向き合う一皿。</p></div>
-      </div>
-      <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M14 12h12l-1 16H15z"/><path d="M14 18h12"/><path d="M18 8c-1 1 0 3 0 3M22 8c-1 1 0 3 0 3"/></svg>
-        <div><h3><span>〆のおでん出汁 炊き込みご飯</span></h3>
-          <p>名物おでんのだしを、最後のひと口まで。締めくくりの定番。</p></div>
-      </div>
-      <div class="item rev">
-        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M13 9h14l-2 11a5 5 0 0 1-10 0z"/><path d="M20 25v6"/><path d="M15 31h10"/></svg>
-        <div><h3><span>自然派ワイン & ドリンク</span></h3>
-          <p>自然派を中心に、日本ワイン、クラフトビール、季節の日本酒や焼酎、自家製の発酵レモンサワー。ソムリエによるペアリングも。</p></div>
+        <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 14h14v8a7 7 0 0 1-14 0z"/><path d="M26 16h3a3 3 0 0 1 0 6h-3"/><path d="M16 9v3M20 8v4"/></svg>
+        <div>
+          <h3><span>ドリンク</span><span class="price">¥600〜</span></h3>
+          <p>ホワイトピーチエイド、ピンクジンジャーエール、季節の紅茶など。</p>
+        </div>
       </div>
     </div>
-    <p class="menu-note">※ メニュー・価格はサンプル用の参考表示です。 ランチ ¥1,000〜 ／ ディナー ¥5,000〜</p>
-  </div>
-</section>
-
-<!-- SPACE -->
-<section id="space" class="space">
-  <div class="wrap">
-    <div class="center rev">
-      <div class="eb">Space</div>
-      <h2>古民家の時間。</h2>
-    </div>
-    <div class="rows">
-      <div class="row rev"><div class="lab">1F</div><div><h3>オープンキッチンのカウンター</h3><p>料理人の手元を眺めながら、ライブ感のある一階のカウンター席。</p></div></div>
-      <div class="row rev"><div class="lab">2F</div><div><h3>テーブル席でゆっくりと</h3><p>古民家の趣を残した二階。語らいの時間に、ソファー席やカップルシートも。</p></div></div>
-      <div class="row rev"><div class="lab">外</div><div><h3>レンガ坂の路地裏</h3><p>看板は控えめ。見つけたらうれしい、隠れ家のような一軒です。</p></div></div>
-    </div>
+    <p class="menu-note">※ メニュー・価格はサンプル用の参考表示です。実際のお店の内容に差し替えます。</p>
   </div>
 </section>
 
 <!-- LOOKBOOK -->
-<section class="look">
+<section id="look" class="look">
   <div class="wrap">
     <div class="center rev">
       <div class="eb">Gallery</div>
-      <h2>北国の風景。</h2>
+      <h2>パステルの、世界観。</h2>
     </div>
     <div class="tiles rev">
-      <div class="tile t1"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M9 24h22a11 9 0 0 1-22 0z"/><path d="M9 24a11 6 0 0 1 22 0"/><path d="M16 13c-2 2 0 4 0 4M24 12c-2 2 0 4 0 4M20 10c-2 2 0 4 0 4"/></svg>
-        <span class="tile-cap">名物おでん</span></div></div>
-      <div class="tile t2"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M14 11h12l-2 11a5 5 0 0 1-8 0z"/><path d="M20 27v5"/><path d="M15 32h10"/></svg>
-        <span class="tile-cap">自然派ワイン</span></div></div>
-      <div class="tile t3"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M9 27h22"/><path d="M11 27c2-6 18-6 20 0"/><path d="M24 13l6-2-1 5"/></svg>
-        <span class="tile-cap">シャルキュトリー</span></div></div>
-      <div class="tile t4"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M20 31c-7-2-11-8-11-15 6 0 11 4 11 11"/><path d="M20 27c2-7 7-11 13-11 0 6-3 11-9 13"/><path d="M20 31V17"/></svg>
-        <span class="tile-cap">古来種野菜</span></div></div>
-      <div class="tile t5"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M8 31V20l12-9 12 9v11"/><path d="M16 31v-7h8v7"/></svg>
-        <span class="tile-cap">古民家の空間</span></div></div>
-      <div class="tile t6"><div class="tile-in">
-        <svg class="tile-ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M9 18h22v2H9z"/><path d="M11 20v11M29 20v11"/><path d="M14 25h12"/><path d="M16 13c0-2 8-2 8 0"/></svg>
-        <span class="tile-cap">カウンター席</span></div></div>
+      <div class="tile t1"><span class="cap">SIGNATURE CHEESECAKE</span></div>
+      <div class="tile t2"><span class="cap">INTERIOR</span></div>
+      <div class="tile t3"><span class="cap">SEASONAL FLOWER</span></div>
+      <div class="tile t4"><span class="cap">SWEETS</span></div>
+      <div class="tile t5"><span class="cap">DRINKS</span></div>
+      <div class="tile t6"><span class="cap">A LITTLE SPECIAL</span></div>
     </div>
-    <p class="menu-note" style="margin-top:36px">※ 実際のサイトには、お店のInstagramのお写真が入ります。</p>
   </div>
 </section>
 
@@ -274,36 +245,36 @@
   <div class="wrap">
     <div class="center rev">
       <div class="eb">Access &amp; Information</div>
-      <h2>中野駅から徒歩1分。</h2>
+      <h2>東中野駅から、徒歩5分。</h2>
     </div>
     <div class="info-grid">
       <div class="info rev">
         <dl>
-          <dt>Address</dt><dd>〒164-0001 東京都中野区中野3-35-8<small>JR中野駅 南口より徒歩1分（レンガ坂の路地裏）</small></dd>
-          <dt>Hours</dt><dd>[昼] 11:30 – 15:00（L.O. 14:15）<small>[夜] 17:00 – 23:00（料理 L.O. 22:00）／ 日曜定休</small></dd>
-          <dt>Tel</dt><dd>03-6382-7474<small>ご予約承ります／テイクアウト・宅配も対応</small></dd>
-          <dt>Payment</dt><dd>各種カード・電子マネー・QR決済可<small>全席禁煙</small></dd>
+          <dt>Address</dt><dd>東京都中野区東中野1-14-26 高山ビル2F<small>東中野駅 東口2 より徒歩約5分</small></dd>
+          <dt>Hours</dt><dd>11:30 〜 <small>火曜定休 ／ 営業時間はお店に合わせて調整します</small></dd>
+          <dt>Tel</dt><dd>070-9034-0393<small>ご予約はお電話、またはネット予約にて</small></dd>
+          <dt>Payment</dt><dd>クレジットカード・QR決済可<small>全面禁煙</small></dd>
         </dl>
-        <a class="ig" href="https://www.instagram.com/root_kitaguni/" target="_blank" rel="noopener">
+        <a class="ig" href="https://www.instagram.com/cafenom.tokyo/" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
-          @root_kitaguni
+          @cafenom.tokyo
         </a>
       </div>
-      <div class="lamp-card rev">
+      <div class="map-card rev">
         <svg class="mk" viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 46C20 46 35 30 35 18A15 15 0 0 0 5 18C5 30 20 46 20 46Z"/><circle cx="20" cy="18" r="5"/></svg>
-        <h3>レンガ坂 路地裏</h3>
-        <p>中野駅南口すぐ、レンガ坂の奥に灯る一軒。<br>見つけにくいときは、どうぞお声がけを。</p>
+        <h3>高山ビル 2F</h3>
+        <p>住宅街にひっそりと佇む、隠れ家のような2階のカフェ。</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="fbrand">root<span class="at">at</span><span class="jp">北国</span></div>
-  <div class="ftag">受け継いだ酒場の灯。</div>
+  <div class="fbrand">cafe nom<span class="dot">.</span></div>
+  <div class="ftag">日常に、少しの特別感を。</div>
   <div class="fnote">
-    〒164-0001 東京都中野区中野3-35-8 ／ 03-6382-7474<br>
-    © root at 北国 ｜ 本ページは制作サンプル（デザインイメージ）です。
+    東京都中野区東中野1-14-26 高山ビル2F ／ 070-9034-0393<br>
+     © cafe nom. ｜ 本ページは制作サンプル（デザインイメージ）です。
   </div>
 </footer>
 
